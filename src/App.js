@@ -86,11 +86,11 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://powerful-plateau-13589.herokuapp.com/imageUrl', {
+    fetch('https://powerful-plateau-13589.herokuapp.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
-            input: JSON.stringify({
-              id: this.state.user.input
+            body: JSON.stringify({
+              input: this.state.input
             })
           })
        .then(response =>response.json())
