@@ -38,6 +38,31 @@ class Register extends React.Component {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
         }
+        else
+        {
+
+   if(!this.state.email && this.state.password.length<5 &&!this.state.name){
+                return alert('incorrect form submission');
+  } 
+          if(!this.state.email)
+          {
+            return alert('Incorrect email');
+          }
+          if(this.state.password.length<5)
+          {
+          return   alert('your password must have atleast 5 charater');
+          }
+
+           if(!this.state.name)
+          {
+           return alert('Please enter your name.');
+          }
+
+          return alert('This email is already exist or Incorrect email');
+          
+
+          
+        }
       })
   }
 

@@ -32,6 +32,28 @@ class Signin extends React.Component {
            this.props.loadUser(user);
           this.props.onRouteChange('home');
         }
+
+ else
+        {
+             if(!this.state.signInEmail &&!this.state.signInPassword)
+             {
+                return alert('Please enter email and password');
+                         } 
+
+
+                            if(!this.state.signInEmail){
+                return alert('Enter your email');
+  } 
+  if(!this.state.signInPassword){
+                return alert('Enter your password');
+  } 
+
+
+
+          return alert('unable to get user please enter right information');
+        }
+
+        
       })
   }
 
